@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Playball&family=Poppins:wght@100;300;400;700&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(47deg, #ff9190, #fdc094);
+  background-repeat: no-repeat;
+}
+h1{
+  font-family: 'Playball', cursive;
+  text-align: center;
+  padding-top: 1rem;
+}
+main{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items:center ;
+ min-height: 90vh;
+}
+
+.left_section{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+  
+}
+.right_section{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input{
+  margin-bottom: 1rem;
+  width: 70%;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  border:none;
+  outline:none;
+  color: #5c201f;
+}
+label{
+  text-align: start;
+}
+#submit-btn{
+  width: 40%;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  border:#fd5552;
+  cursor:pointer;
+  background: linear-gradient(-47deg, #fd5552, #fd8630);
+  transition: all .5s;
+}
+#submit-btn:hover{
+  width: 70%;
+  background: linear-gradient(-47deg, #fd8630, #fd5552);
+}
+
+#output-box
+{
+ flex: 1;
+  background: linear-gradient(-47deg, rgba(253, 134, 48,0.5), rgba(253, 85, 82,0.5));
+  padding:3rem 1rem;
+  width: 60%;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  display: none;
+}
+#output-graphic{
+ flex: 1;
+  width: 60%;
+}
+
+img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Removing the spin arrow in input type number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@media screen and (max-width: 600px)
+{
+  main{
+  flex-direction: column;
+  gap: 2rem;
+  }
+  .left_section, .right_section{
+    width: 100%;
+  }
+  #output-box, #output-graphic{
+    width: 80%;
+  }
+  input{
+    width: 80%;
+  }
+  #submit-btn:hover{
+    width: 80%;
+  }
+
+}
